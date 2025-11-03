@@ -1,0 +1,72 @@
+.product-card {
+  position: relative;
+  border: 1px solid #f3f4f6; 
+  border-radius: 1rem; 
+  cursor: pointer;
+  padding: 0.5rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: all 0.3s ease; /* transition-all */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* hover:shadow-2xl */
+}
+
+.product-image {
+  background: #f3f4f6;
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: contain;
+}
+
+/* wrapper to control image area height and centering */
+.product-image-wrapper{
+  background: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Fixed visual height so all images occupy same vertical space */
+  height: 12rem;
+  overflow: hidden;
+}
+.product-title {
+  line-clamp: 2;                /* Standard property - future support */
+  display: -webkit-box;         /* Required for -webkit-line-clamp */
+  -webkit-line-clamp: 2;        /* Limits text to 2 lines */
+  -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
+  overflow: hidden;             /* Hide overflowing text */
+  padding: 0.25rem;
+  font-weight: 600;
+}
+.product-price {
+  margin-top: 0.25rem;   /* my-1 → margin-top and margin-bottom */
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;   /* text-lg */
+  line-height: 1.75rem;  /* matches Tailwind's text-lg line height */
+  color: #1f2937;        /* text-gray-800 */
+  font-weight: 700;      /* font-bold */
+}
+.Add-to-cart {
+  background-color: #ef4444; /* bg-red-500 */
+  padding-left: 0.75rem; /* px-3 */
+  padding-right: 0.75rem; 
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem;
+  font-size: 1.125rem; /* text-lg */
+  border-radius: 0.375rem; /* rounded-md */
+  color: #ffffff; /* text-white */
+  width: 100%; /* w-full */
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem; /* gap-2 */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  font-weight: 600; /* font-semibold */
+}
